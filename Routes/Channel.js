@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { createChannel, getChannels } = require("../Controllers/Channel");
 
-// Route to create a new channel
+// Route to create a new channel for a creator
 // POST /api/channels
 router.post("/createChannel", createChannel);
 
