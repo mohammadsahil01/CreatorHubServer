@@ -2,8 +2,8 @@ services:
   - type: web
     name: creator-hub-api
     env: node
-    region: singapore  # Closest to India for better latency
-    plan: free  # Free tier
+    region: singapore
+    plan: free
     buildCommand: yarn install
     startCommand: yarn start
     healthCheckPath: /health
@@ -13,10 +13,4 @@ services:
       - key: PORT
         value: 3000
       - key: MONGODB_URI
-        sync: false  # Set this manually in Render dashboard
-    autoDeploy: true
-    # Free tier limitations
-    scaling:
-      minInstances: 0  # Allows spinning down when inactive
-      maxInstances: 1
-    # No disk configuration for free tier
+        sync: false
